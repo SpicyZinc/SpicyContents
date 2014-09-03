@@ -1,0 +1,12 @@
+{
+  "name": "modernizr-latest",
+  "_cacheHeaders": {
+    "Last-Modified": "Sat, 05 Jul 2014 14:02:26 GMT",
+    "Content-Length": "51351",
+    "Content-Type": "application/javascript; charset=utf-8"
+  },
+  "main": "index.js",
+  "_source": "http://modernizr.com/downloads/modernizr-latest.js",
+  "_target": "*",
+  "_originalSource": "http://modernizr.com/downloads/modernizr-latest.js"
+}

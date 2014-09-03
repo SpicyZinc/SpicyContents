@@ -5,8 +5,9 @@ var util = require('util'),
     fs = require('fs'),
     url = require('url'),
     events = require('events');
+    conf = require('../config/server-config.js');
 
-var DEFAULT_PORT = 8000;
+var DEFAULT_PORT = conf.web_port;
 
 function main(argv) {
   new HttpServer({

@@ -1,0 +1,46 @@
+<div id="toolbar">    
+    <h1> {{ apps[1].title }} </h1> 
+</div>
+
+<div class="container">
+    <div class="left-container">
+        <div class="reports-options">
+            <img class="icon-img" src="wbr_angular/img/chart.png">
+            <ul class="tabs" ng-show="reportsOptionHidden">
+                <li>
+                    <label><a href="#/report1">R1</a></label>
+                </li>
+                <li>
+                    <label><a href="#/report2">R2</a></label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="settings-holder calendar" calendar-show ng-init="isHidden=false" ng-click="isHidden=!isHidden">
+            <img class="icon-img" src="wbr_angular/img/settings.png">
+        </div>
+
+        <div id="settings_expand" ng-show="isHidden">
+            <form name="date_form" ng-submit="doApply(from_date, to_date)">
+
+                <div class="start_end_date">From</div>
+                <input type="text" kalendae="dropdown" ng-model="from_date"/><div class="smallcalendar calicon"></div>
+                <div class="start_end_date">To</div>
+                <input type="text" kalendae="dropdown" ng-model="to_date"/><div class="smallcalendar calicon"></div>
+                <input id="date_submit" type="submit" value="Apply" />
+
+            </form>
+        </div>
+    </div>
+
+    <div class="right-container">
+        <div id="report_chart">
+
+            <div highcharts id="chart" config="chart_config"></div>
+            <div highcharts id="yoy_chart" config="yoy_chart_config"></div>
+
+            <div boxplots id="box_plot" config="boxplot_config"></div>
+
+        </div>
+    </div>
+</div>	
