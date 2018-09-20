@@ -11,6 +11,7 @@ import {
 import Hello from './components/Hello';
 import About from './components/About';
 import Arc from './components/Arc';
+import ToDo from './components/todo/ToDo';
 
 class App extends Component {
 
@@ -28,6 +29,7 @@ class App extends Component {
 							<li><Link to="/hello">Hello</Link></li>
 							<li><Link to="/about">About</Link></li>
 							<li><Link to="/d3">D3</Link></li>
+							<li><Link to="/todo">TODO DEMO</Link></li>
 						</ul>
 						<hr />
 
@@ -35,6 +37,7 @@ class App extends Component {
 							<Route exact path="/hello" component={Hello} />
 							<Route exact path="/about" component={About} />
 							<Route exact path="/d3" component={Arc} />
+							<Route exact path="/todo" component={ToDo} />
 						</Switch>
 					</div>
 				</div>

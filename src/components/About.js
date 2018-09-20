@@ -1,9 +1,28 @@
 import React from 'react';
+import Search from './autocomplete/Search';
 
-export const About = () => (
+const About = () => (
 	<div>
 		<h1>
 			About Myself
 		</h1>
+		<Search
+			options={
+				[
+					"Alligator",
+					"Bask",
+					"Crocodilian",
+					"Death Roll",
+					"Eggs",
+					"Jaws",
+					"Reptile",
+					"Solitary",
+					"Tail",
+					"Wetlands"
+				]
+			}
+		/>
 	</div>
 );
+
+export default About;
