@@ -6,10 +6,14 @@ const outerRadius = 110;
 const cornerRadius = 5;
 
 const pieGenerator = d3.pie();
-const arcData = pieGenerator([580, 60, 120, 170]);
-
 
 class Arc extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			arcData: pieGenerator(props.data)
+		}; 
+	}
 
 	componentDidMount() {
 		const context = this.setContextGroup();
@@ -27,12 +31,9 @@ class Arc extends Component {
 	}
 
 	setForeground(context) {
-		
-		console.log(arcData);
-
 		return context
 			.selectAll("path")
-			.data(arcData)
+			.data(this.state.arcData)
 			.enter()
 			.append('path')
 			.style('fill', (d) => d3.color("hsl(120, 50%, " + d.index * 0.5 / 6 * 100 + "%)"))
@@ -44,7 +45,7 @@ class Arc extends Component {
 	addLabel(context) {
 		return context
 			.selectAll(".arcsText")
-			.data(arcData)
+			.data(this.state.arcData)
 			.enter()
 			.append("text")
 			.attr("class", "arcsText")

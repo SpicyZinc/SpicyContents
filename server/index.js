@@ -93,6 +93,6 @@ app.post('/todo/tasks/:id/edit', function(req, res, next) {
 
 });
 
-// app.use(express.static(__dirname +'./../dist/')); //serves the index.html
+app.use(express.static(__dirname +'./../dist/')); //serves the index.html
 app.listen(3000); //listens on port 3000 -> http://localhost:3000/
 console.log('Started listening on port 3000');

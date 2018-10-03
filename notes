@@ -4,3 +4,4 @@ credit: https://www.robinwieruch.de/minimal-react-webpack-babel-setup/
  babel-loader@8 requires Babel 7.x (the package '@babel/core'). If you'd like to use Babel 6.x ('babel-core'), you should install 'babel-loader@7'.
 
 2. arc, https://bl.ocks.org/markarios/6b8b91e0c4ce77b4942659aace8d2d6c
+3. don't mix div with svg g rect anc circle, fuck so much time wasted
